@@ -1,110 +1,141 @@
-# 📘 Resumo para Prova – Fundamentos do Teste de Software
-
-Este resumo foi elaborado com base no conteúdo da disciplina e está focado nas principais questões da prova.
+# 📘 Fundamentos da Qualidade de Software – Guia para a Prova
 
 ---
 
-## ✅ Questão 1 – Especificação de Software
+## ✅ Questão 1 – Gurus da Qualidade
 
-- A **especificação de software** (ou engenharia de requisitos) define os **requisitos funcionais e não funcionais** do sistema.
-- Envolve:
-  1. Estudo de viabilidade.
-  2. Elicitação e análise de requisitos.
-  3. Especificação de requisitos.
-  4. Validação de requisitos.
-- Essas etapas **não ocorrem necessariamente em ordem linear**.
+**Principais nomes e contribuições:**
 
----
+- **Walter A. Shewhart** – Ciclo PDSA, gráficos de controle.
+- **W. Edwards Deming** – Ciclo PDCA, melhoria contínua.
+- **Joseph M. Juran** – Planejamento e controle da qualidade.
+- **Philip Crosby** – Filosofia do Zero Defeito.
+- **Armand Feigenbaum** – Controle de Qualidade Total (TQC), 9Ms da qualidade.
 
-## ✅ Questão 2 – Projeto e Implementação
-
-- O **projeto de arquitetura**:
-  - Define a **estrutura geral** do sistema.
-  - Mostra **como os componentes são distribuídos e se relacionam**.
-- Está incluído na fase de **projeto e implementação de software**.
+> 📄 *Trecho do PDF*:  
+> “Esses homens desenvolveram grandes contribuições e foram pioneiros nos estudos efetuados sobre qualidade...”  
+> (*Fundamentos da Qualidade de Software*, p. 18)
 
 ---
 
-## ✅ Questão 3 – Modelos de Processo de Software
+## ✅ Questão 2 – Definições de Qualidade segundo Chrissis
 
-- Um **modelo de processo** é uma **representação simplificada** de um processo de software.
-- **Modelo em cascata**:
-  - Etapas **sequenciais**, onde uma inicia após a outra terminar.
-- **Desenvolvimento incremental**:
-  - Baseado em **entregas parciais com feedback**, **não é focado em reuso**.
+**Chrissis et al. (2011):**
 
-**Ordem correta:**  
-( V ) O modelo é uma representação simplificada.  
-( F ) Desenvolvimento incremental não é voltado ao reuso.  
-( V ) No modelo cascata, uma etapa só inicia após a anterior.
+> “Qualidade é a capacidade de um conjunto de características inerentes de um produto, componente ou processo para atender aos requisitos dos clientes.”  
+> (*Fundamentos da Qualidade de Software*, p. 18)
 
----
+**Complemento (ISO 8402):**
 
-## ✅ Questão 4 – Atributos de Qualidade
-
-- Qualidade envolve:
-  - **O que o software faz**.
-  - **Como ele se comporta durante a execução**.
-- **Atributos comuns**:
-  - Confiabilidade
-  - Eficiência
-  - Usabilidade
-  - Funcionalidade
-  - Manutenibilidade
-  - Portabilidade
+> “Totalidade das características de uma entidade que lhe confere a capacidade de satisfazer às necessidades explícitas e implícitas.”  
+> (*Fundamentos da Qualidade de Software*, p. 18)
 
 ---
 
-## ✅ Questão 5 – Engenharia de Software Orientada a Reuso
+## ✅ Questão 3 – Modelo de McCall
 
-- Etapas do modelo baseado em reuso:
-  - **Análise de componentes**
-  - Modificação de requisitos
-  - Projeto do sistema com reuso
-  - Desenvolvimento e integração
+**Três perspectivas de McCall (1977):**
 
----
+1. **Operações do Produto** – exatidão, confiabilidade, integridade, eficiência, usabilidade.
+2. **Revisão do Produto** – manutenibilidade, testabilidade, flexibilidade.
+3. **Transição do Produto** – portabilidade, reutilização, interoperabilidade.
 
-## ✅ Questão 6 – Custo da Qualidade
-
-**Três categorias:**
-1. **Prevenção** – Treinamentos, planejamento de testes.
-2. **Avaliação** – Execução de testes, coleta de métricas.
-3. **Falhas**:
-   - **Internas** – Descobertas antes da entrega.
-   - **Externas** – Descobertas após entrega ao cliente.
+> 📄 *Trecho do PDF*:  
+> “No total, McCall identificou os 11 fatores de qualidade divididos pelas três perspectivas...”  
+> (*Fundamentos da Qualidade de Software*, p. 23)
 
 ---
 
-## ✅ Questão 7 – Fatores de Qualidade (McCall)
+## ✅ Questão 4 – História da Qualidade de Software
 
-- **I. Verdadeiro** – Integridade trata de controle de acesso indevido.
-- **II. Falso** – Testabilidade é subcaracterística de manutenibilidade, não de revisão.
-- **III. Verdadeiro** – Correção e confiabilidade são fatores de operação.
+**Evolução histórica:**
+- Guildas medievais → Revolução Industrial → Segunda Guerra → ISO 9000
+- Foco moderno: DevOps, integração contínua, qualidade como processo.
 
----
-
-## ✅ Questão 8 – Atividades Básicas do Processo (Pressman)
-
-1. **Comunicação** – Envolvimento com stakeholders.
-2. **Planejamento** – Cronograma, recursos, orçamento.
-3. **Modelagem** – Representação das funcionalidades.
-4. **Construção** – Codificação e testes.
-5. **Emprego** – Entrega e feedback do usuário.
+> 📄 *Trecho do PDF*:  
+> “Historicamente, as abordagens acerca da qualidade passaram pelos seguintes estágios ao longo dos séculos...”  
+> (*Fundamentos da Qualidade de Software*, p. 10)
 
 ---
 
-## ✅ Questão 9 – Dimensões de Qualidade (Garvin)
+## ✅ Questão 5 – Atividades segundo Pressman
 
-- **Confiabilidade**: o sistema funciona sem falhas e está disponível.
-- **Durabilidade** (facilidade de manutenção): mudanças podem ser feitas sem afetar o funcionamento.
+**As 5 atividades básicas da engenharia de software:**
+
+1. Comunicação  
+2. Planejamento  
+3. Modelagem  
+4. Construção  
+5. Emprego
+
+> 📄 *Trecho do PDF*:  
+> “Pressman (2011) sugere uma metodologia de processo genérica para engenharia de software baseada em cinco atividades básicas...”  
+> (*Fundamentos do Teste de Software*, p. 7)
 
 ---
 
-## ✅ Questão 10 – ISO/IEC 9126 – Subcaracterísticas da Manutenibilidade
+## ✅ Questão 6 – Modelos segundo Rodrigues
 
-- **Modificabilidade** – Facilidade para modificar/corrigir o software.
-- **Estabilidade** – Risco de impactos com as mudanças.
-- **Testabilidade** – Facilidade de testar após mudanças.
+**Contexto atual da gestão da qualidade:**
+- Tendência à globalização.
+- Melhoria contínua voltada à inovação.
+- Adaptação ao cenário competitivo.
+
+> 📄 *Trecho do PDF*:  
+> “Os conceitos e modelos de gestão e produção tendem a uma globalização [...] voltado ao novo e competitivo contexto organizacional.”  
+> (*Fundamentos da Qualidade de Software*, p. 8)
+
+---
+
+## ✅ Questão 7 – Responsabilidade pela Qualidade
+
+**Segundo Bartie (2002):**
+- A responsabilidade é coletiva.
+- Cultura organizacional de **não tolerância a erros**.
+- Nenhuma linha de código deve ser adicionada sem entendimento.
+
+> 📄 *Trecho do PDF*:  
+> “Ao buscar garantir a qualidade de um software, estamos diante do desafio de estabelecer uma cultura de não tolerância a erros [...] nem uma única linha no programa de software deveria ser adicionada ou alterada sem um entendimento completo do que se está desenvolvendo.”  
+> (*Fundamentos da Qualidade de Software*, p. 13)
+
+---
+
+## ✅ Questão 8 – Perspectiva de Transição do Produto (McCall)
+
+**Fatores de transição:**
+- **Portabilidade**
+- **Reutilização**
+- **Interoperabilidade**
+
+> 📄 *Trecho do PDF*:  
+> “A perspectiva de transição do produto identifica os fatores de qualidade que influenciam a capacidade de adaptar o software a novos ambientes...”  
+> (*Fundamentos da Qualidade de Software*, p. 23)
+
+---
+
+## ✅ Questão 9 – Projeto e Implementação
+
+**Definição:**
+- Etapa que define a **estrutura geral do software**.
+- Mostra como os componentes se organizam e interagem.
+
+> 📄 *Trecho do PDF*:  
+> “Temos um projeto que define a estrutura geral do programa [...] como os componentes são distribuídos e como se relacionam.”  
+> (*Fundamentos do Teste de Software*, p. 10)
+
+---
+
+## ✅ Questão 10 – Custo da Qualidade (Pressman)
+
+**Subdivisões do custo da qualidade:**
+
+1. **Prevenção** – treinamentos, planejamento.
+2. **Avaliação** – inspeções, auditorias, testes.
+3. **Falhas Internas** – falhas encontradas antes da entrega.
+4. **Falhas Externas** – falhas descobertas após a entrega ao cliente.
+
+> 📄 *Trecho do PDF*:  
+> “O custo da qualidade inclui todos os custos necessários para a busca de qualidade, assim como os custos causados pela falta da mesma...”  
+> (*Fundamentos da Qualidade de Software*, p. 31)
 
 ---

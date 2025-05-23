@@ -1,154 +1,128 @@
-# 📘 Fundamentos do Teste de Software – Conceitos Essenciais para o Dia a Dia e Entrevistas
+# 📘 Fundamentos da Qualidade de Software
+
+Análise dos principais temas do PDF, com definições completas e trechos originais do material.
 
 ---
 
-## 📌 1. O Que é Teste de Software?
+## 📌 1. Definição de Qualidade de Software
 
-> “Os testes são executados para descobrir situações em que o software se comporta de maneira incorreta, indesejável ou de forma diferente das especificações.” – Sommerville (2011)
+> **Definição**:  
+> Qualidade de software é uma gestão de qualidade efetiva aplicada de modo a criar um produto útil que forneça valor mensurável tanto para quem desenvolve quanto para quem usa.
 
-- O teste **não garante ausência de defeitos**, mas **aumenta a confiança na qualidade**.
-- Quanto mais cedo testar, **menor o custo da correção**.
-
----
-
-## 📌 2. Verificação x Validação
-
-| Conceito       | Descrição                                                                 |
-|----------------|--------------------------------------------------------------------------|
-| **Verificação** | O software foi construído corretamente? (ex: revisão de código, inspeção) |
-| **Validação**   | O software certo foi construído? (ex: testes com base nos requisitos)     |
+> **Trecho do PDF**:  
+> “A qualidade de software pode ser definida como uma gestão de qualidade efetiva aplicada de modo a criar um produto útil que forneça valor mensurável para aqueles que o produzem e para aqueles que o utilizam.”  
+> (*Fundamentos da Qualidade de Software*, p. 18)
 
 ---
 
-## 📌 3. Tipos de Teste por Nível
+## 📌 2. Modelos Clássicos de Qualidade
 
-| Nível            | O que testa                                    | Responsável       |
-|------------------|-------------------------------------------------|-------------------|
-| **Unitário**     | Componentes isolados (funções, métodos)         | Desenvolvedor     |
-| **Integração**   | Comunicação entre módulos                       | Dev / QA          |
-| **Sistema**      | Sistema como um todo                            | QA                |
-| **Aceitação**    | Validação final com dados reais e cliente       | Cliente + QA      |
+### 📎 Modelo de McCall (1977)
 
----
+Fatores organizados em três grupos:
 
-## 📌 4. Teste Caixa Preta (Black-box)
+- **Operações do Produto**: exatidão, confiabilidade, eficiência, integridade, usabilidade.  
+- **Revisão do Produto**: manutenibilidade, flexibilidade, testabilidade.  
+- **Transição do Produto**: portabilidade, reutilização, compatibilidade.
 
-- Foca no **comportamento externo** do software.
-- O testador **não tem acesso ao código**.
-- **Técnicas mais comuns:**
-  - ### ✔ Particionamento de Equivalência
-    > “O domínio de entrada de um programa é dividido em classes de dados de entrada de onde os casos de teste podem ser derivados.”  
-    📄 *Página 19*
-    - Divide os valores em classes válidas e inválidas.
-    - Testa um valor representativo por classe.
-
-  - ### ✔ Análise de Valor Limite
-    > “Casos de teste são desenvolvidos com base nos limites de partições de equivalência.”  
-    📄 *Página 19*
-    - Testa os valores **nas bordas** do intervalo.
-
-  - ### ✔ Tabela de Decisão
-    > “Útil para representar a lógica de decisão [...] quando há número limitado de combinações.”  
-    📄 *Página 20*
-    - Mostra as condições e ações esperadas em uma tabela.
-
-  - ### ✔ Estado-Transição
-    > “Usada para testar sistemas que respondem a eventos dependendo do estado atual.”  
-    📄 *Página 21*
-    - Ideal para interfaces e sistemas com múltiplos estados.
-
-> "Caixa preta é ideal para testar se o sistema está se comportando conforme o esperado, com base nos requisitos."
+> **Trecho do PDF**:  
+> “No total, McCall identificou os 11 fatores de qualidade divididos pelas três perspectivas.”  
+> (*Fundamentos da Qualidade de Software*, p. 23)
 
 ---
 
-## 📌 5. Teste Caixa Branca (White-box)
+### 📎 Modelo de Boehm (1978)
 
-- Foco na **estrutura interna e lógica do código**.
-- O testador **tem acesso ao código-fonte**.
-- **Técnicas comuns:**
+Organizado em três requisitos principais:
 
-  - ### ✔ Cobertura de Instruções
-    > “Executar cada instrução do programa pelo menos uma vez.”  
-    📄 *Página 23*
+1. **Utilização as-is**: facilidade de uso, confiabilidade, eficiência.  
+2. **Manutenabilidade**: facilidade de alteração e reteste.  
+3. **Portabilidade**: adaptação para novos ambientes.
 
-  - ### ✔ Cobertura de Decisões e Condições
-    > “Cada decisão deve assumir valores verdadeiro e falso ao menos uma vez.”  
-    📄 *Página 23*
-    > “Cada condição booleana deve tomar os dois valores.”  
-    📄 *Página 23*
+> **Fatores associados**: confiabilidade, eficiência, usabilidade, testabilidade, compreensibilidade, flexibilidade.
 
-  - ### ✔ Teste de Caminho Básico (McCabe)
-    > “Construção de gráfico de fluxo e cálculo da complexidade ciclomática.”  
-    📄 *Página 24*
-    - Fórmula: `V(G) = E – N + 2`
-    - Cada caminho independente deve ser testado.
+> **Trecho do PDF**:  
+> “Boehm definiu três usos principais... e fatores de qualidade associados como confiabilidade, eficiência, usabilidade, testabilidade, compreensibilidade e flexibilidade.”  
+> (*Fundamentos da Qualidade de Software*, p. 24)
 
 ---
 
-## 📌 6. Testes de Regressão e Re-teste
+## 📌 3. ISO/IEC 25010:2011
 
-| Tipo          | Objetivo                                                             |
-|---------------|----------------------------------------------------------------------|
-| **Re-teste**  | Verificar se o erro corrigido foi realmente resolvido               |
-| **Regressão** | Verificar se funcionalidades existentes continuam funcionando       |
+Modelo mais moderno que define **8 características principais de qualidade**:
 
----
+1. Funcionalidade  
+2. Confiabilidade  
+3. Usabilidade  
+4. Eficiência  
+5. Compatibilidade  
+6. Segurança  
+7. Manutenibilidade  
+8. Portabilidade
 
-## 📌 7. Testes de Estresse e Performance
-
-- Avaliam o comportamento do sistema sob **condições extremas**.
-
-### Exemplos:
-- **Estresse**: "10 mil usuários simultâneos"
-- **Carga**: "100 requisições por segundo"
-- **Performance**: "tempo de resposta inferior a 2 segundos"
-
----
-
-## 📌 8. Processo de Teste – Ciclo de Vida
-
-Etapas segundo Eliza e Lagares (2012):
-
-1. **Planejamento**
-   - Escopo, objetivos, riscos, ambiente de testes.
-2. **Projeto**
-   - Casos de teste, scripts, massa de dados.
-3. **Execução**
-   - Execução dos testes e registro de falhas.
-4. **Entrega**
-   - Apoio no teste de aceitação e documentação final.
+> **Trecho do PDF**:  
+> “O modelo SQuaRE envolve oito componentes, a saber: estabilidade funcional, eficiência de desempenho, compatibilidade, usabilidade, confiabilidade, segurança, manutenibilidade e portabilidade.”  
+> (*Fundamentos da Qualidade de Software*, p. 30)
 
 ---
 
-## 📌 9. Artefatos de Teste
+## 📌 4. Dimensões de Qualidade segundo Garvin (1984)
 
-| Artefato                  | Finalidade                                                 |
-|---------------------------|------------------------------------------------------------|
-| **Plano de Teste**        | Estratégia, escopo, recursos                               |
-| **Casos de Teste**        | Passos, entradas e resultados esperados                    |
-| **Evidências de Teste**   | Prints, logs, documentos que provam a execução             |
-| **Matriz de Rastreabilidade** | Mapeia requisitos ↔ casos de teste                  |
+Propostas oito dimensões de qualidade:
 
----
+- Desempenho  
+- Recursos  
+- Confiabilidade  
+- Conformidade  
+- Durabilidade  
+- Facilidade de manutenção  
+- Estética  
+- Percepção
 
-## 📌 10. Papéis no Processo de Teste
-
-| Papel                  | Responsabilidades                                      |
-|------------------------|--------------------------------------------------------|
-| **Analista de Teste**  | Escreve planos e casos de teste, executa testes manuais |
-| **Engenheiro de Teste**| Automatiza testes, configura ambiente                   |
-| **Testador**           | Executa testes manuais e reporta defeitos              |
-| **Coordenador de Teste**| Monitora indicadores, prazos e qualidade               |
+> **Trecho do PDF**:  
+> “Garvin (1984) aponta: A qualidade é um conceito complexo e multifacetado... A visão do usuário enxerga a qualidade em termos das metas específicas de um usuário.”  
+> (*Fundamentos da Qualidade de Software*, p. 31)
 
 ---
 
-## 📌 11. Boas Práticas para o Dia a Dia
+## 📌 5. Garantia da Qualidade de Software (SQA)
 
-- Use ferramentas como Jira, Azure DevOps.
-- Comece a testar cedo (**Shift-left testing**).
-- Use **análise de risco** para priorizar testes.
-- **Automatize** testes repetitivos.
-- Use **checklists** para garantir cobertura.
-- Versione e compartilhe seus artefatos.
+Conjunto de atividades focadas na **qualidade dos processos**:
+
+- Definição de padrões e métodos (ex: ISO, IEEE)  
+- Planejamento de qualidade  
+- Auditorias, revisões técnicas  
+- Gestão de defeitos  
+- Treinamento da equipe  
+- Avaliação de riscos e mudanças
+
+> **Trecho do PDF**:  
+> “Segundo Pressman (2011), a garantia da qualidade de software engloba um amplo espectro de preocupações e atividades...”  
+> (*Fundamentos da Qualidade de Software*, p. 31)
+
+---
+
+## 📌 6. Controle de Qualidade de Software (SQC)
+
+Foco no produto final — identificar e corrigir defeitos:
+
+> **Trecho do PDF**:  
+> “O Controle de Qualidade de Software (SQC) é um conjunto de atividades para garantir a qualidade dos produtos de software. Essas ações têm como objetivo identificar defeitos no produto real.”  
+> (*Fundamentos da Qualidade de Software*, p. 30)
+
+---
+
+## 📌 7. Qualidade de Software Enquanto Processo
+
+Abordagem que visa prevenir defeitos já nas fases iniciais, por meio de:
+
+- Definição de processos e normas  
+- Avaliações de qualidade  
+- Planejamento e auditorias  
+- Coleta de métricas
+
+> **Trecho do PDF**:  
+> “A abordagem baseada no produto tem contribuído para elevar a qualidade... porém... após a avaliação são identificadas correções e melhorias.”  
+> (*Fundamentos da Qualidade de Software*, p. 29)
 
 ---
